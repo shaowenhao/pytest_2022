@@ -1,0 +1,17 @@
+笔记
+1. 准备requirements。txt 安装依赖模块
+
+刚开始的时候__init__.py tool这个package 可以作为一个模块导入 下面的py都可以作为模块导入
+https://www.zhihu.com/question/315488237/answer/2463720836
+https://www.cnblogs.com/ludx/p/15840716.html
+
+
+2. 先建config目录，创建environment.yaml
+
+3. 读配置 需要攻击 建tool包 __init__.py 里 requests_environment_info方法定义
+
+4. 新建read_file.py 读取yaml的方法
+https://blog.csdn.net/weixin_48580001/article/details/115220956 (@classmethod)
+
+5. 封装请求 新建requests_.py
+
