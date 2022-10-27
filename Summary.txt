@@ -15,3 +15,13 @@ https://blog.csdn.net/weixin_48580001/article/details/115220956 (@classmethod)
 
 5. 封装请求 新建requests_.py
 
+==================================
+接口测试用例模板
+6. 建case目录 先把sql部分去掉
+http://jsonpath.com/  校验jsonpath的在线工具
+https://www.jianshu.com/p/8c0ade82891b jsonpath例子
+
+7. 写处理参数的方法 parameter_setting.py
+
+
+

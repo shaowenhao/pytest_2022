@@ -22,6 +22,7 @@ class ReadFile:
 
 if __name__ == '__main__':
     # D:\PycharmProjects\pytest_2022\tool/
-    print(ReadFile.project_directory)
-
-    print(ReadFile.read_yaml('config/environment.yaml'))
+    # print(ReadFile.project_directory)
+    #
+    # print(ReadFile.read_yaml('config/environment.yaml'))
+    print(ReadFile.read_yaml('case/test.yaml'))

@@ -1,0 +1,51 @@
+#用例(名称)标题
+用例标题:
+  #接口地址
+  path: /test
+  #请求方法
+  method: get
+  # 备注信息
+  remark: 这个是使用模板
+  # 是否运行
+  is_run: False
+  #请求参数较多，这里就使用原始字典格式，除了提取表达式，其他的都带上引号，预防出错,random_time()随机函数使用
+  data:
+    {
+      "id":$.tq_data.id,
+      "projectNo": "320SF000206004",
+    }
+  #从接口返回结果提取哪些字段和提取表达式,比如从返回数据提取用户id和name
+  extract_key:
+    id: $.id
+    name: $.name
+  #断言表达式
+  # 除了数字类型比较，其他的字符或者表达式全部带上引号,表达式必须要写在后面（必须按照格式来）
+  assert_expression:
+     # 断言sql为有返回值查询
+   ["'12' in '123'", '"ig" == "$.ig"']
+
+
+获取运单号:
+  path: /get_waybill_no
+  method: get
+  remark: 获取运单号，提取运单号,这个方法提取出运单号
+  is_run: True
+  data:
+  extract_key:
+    waybill_no: $.waybill_no
+  assert_expression:
+    ['"lj520"=="$.waybill_no"']
+
+录单:
+  path: /lu_dan
+  method: post
+  remark: 录单，使用运单号
+  is_run: True
+  data:
+    {
+      "waybill_no":$.waybill_no,
+      "lu_dan_ren":"小江"
+    }
+  extract_key:
+  assert_expression:
+    ['"运单创建成功"=="$.msg"']
