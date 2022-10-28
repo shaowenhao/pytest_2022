@@ -23,5 +23,7 @@ https://www.jianshu.com/p/8c0ade82891b jsonpath例子
 
 7. 写处理参数的方法 parameter_setting.py
 
+8. read_file.py里添加read_case方法
+
 
 
