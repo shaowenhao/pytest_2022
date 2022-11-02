@@ -52,6 +52,21 @@ class ParameterSetting:
             print(f'最终返回的参数{data}')
             return data
 
+    @classmethod
+    def extract_value(cls,api_response:dict,extract_key:dict):
+        '''
+
+        :param api_response:
+        :param extract_key: e.g. {'billCommonNo':'$.content.billCommonNo'}
+        :return: 返回通过表达式提取出接口的最终要存的值
+        '''
+        # api_response = {'code':200,'billComminNo':'20221101'}
+        extract_value = {}
+        for k,v in extract_key.items():
+            extract_value[k] = jsonpath(api_response,v)[0]
+            #定义的参数池 返回明确的值 e.g. {'billCommonNo':'20221101'}
+        return extract_value
+
 if __name__ == '__main__':
 
     # 自测写入前后 准备一个字典类型的数据

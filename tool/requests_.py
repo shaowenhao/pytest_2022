@@ -14,14 +14,15 @@ class Requests:
         url = requests_environment_info()['ip'] + path
         headers = requests_environment_info()['headers']
         print(f'url信息{url},headrs信息{headers}')
-       # return requests.get(url=url,headers=headers).json()
+        # headers里有token的值
+        return requests.get(url=url,headers=headers).json()
 
     @classmethod
     def post(cls,path,data):
         url = requests_environment_info()['ip'] + path
         headers = requests_environment_info()['headers']
         print(f'url信息{url},headrs信息{headers},data信息{data}')
-       # return requests.post(url=url,headers=headers,data=json.dumps(data)).json()
+        return requests.post(url=url,headers=headers,data=json.dumps(data)).json()
 
 if __name__ == '__main__':
     Requests.get('/api/v2/getxxx')
