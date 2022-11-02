@@ -4,7 +4,7 @@
 # 文件名称: assert.PY
 # 需要断言的格式 ["'12' in '123'", '"ig" == "$.ig"']
 from jsonpath import jsonpath
-
+from tool.log import logger
 
 class Assert:
 
@@ -16,6 +16,8 @@ class Assert:
         :return:
         '''
         new_assert_list = []
+        logger.info(f'初始的断言列表{assert_list}')
+
         for i in assert_list:
             if '$.' in i:
                 # String find 查找  获取$的索引位置
@@ -33,6 +35,7 @@ class Assert:
                 i = i.replace(assert_json_path,value)
             new_assert_list.append(i)
             #到这步位置 结果变成 ["'12' in '123'", '"ig" == "theshy"']
+        logger.info(f'替换完成后的断言列表{new_assert_list}')
         assert_result_list = []
         for i in new_assert_list:
             assert_result = eval(i)
@@ -40,6 +43,7 @@ class Assert:
             #变成[True,False]
         print(new_assert_list)
 
+        logger.info(f'最终断言结果{assert_result_list}')
         print(assert_result_list)
         if False in assert_result_list:
             return False

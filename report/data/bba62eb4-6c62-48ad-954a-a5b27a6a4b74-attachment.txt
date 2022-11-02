@@ -1,0 +1,5 @@
+INFO     test:test_case.py:13 用例初始信息{'path': '/lu_dan', 'method': 'post', 'remark': '录单，使用运单号', 'is_run': True, 'data': {'waybill_no': '$.waybill_no', 'lu_dan_ren': '小江'}, 'extract_key': None, 'assert_expression': ['"运单创建成功"=="$.msg"'], 'case_name': '录单'}
+INFO     test:requests_.py:25 url信息http://192.168.1.5:8001/lu_dan,headrs信息{'Accept-Encoding': 'gzip, deflate', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'token': 'em123dca666333'},data信息{'waybill_no': 'lj520', 'lu_dan_ren': '小江'}
+INFO     test:assert_.py:19 初始的断言列表['"运单创建成功"=="$.msg"']
+INFO     test:assert_.py:38 替换完成后的断言列表['"运单创建成功"=="运单创建成功"']
+INFO     test:assert_.py:46 最终断言结果[True]

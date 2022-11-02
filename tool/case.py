@@ -7,10 +7,12 @@
 from tool.requests_ import Requests
 from tool.parameter_setting import ParameterSetting
 from tool.assert_ import Assert
+from tool.log import logger
 
 def extract_(api_response, extract_key):
     #参数提取
     if extract_key:
+        logger.info(f'参数提取表达式：{extract_key}')
         extract_value = ParameterSetting.extract_value(api_response, extract_key)
         ParameterSetting.parameter_setting(extract_value, 'save')
 

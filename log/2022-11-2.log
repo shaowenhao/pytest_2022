@@ -1,0 +1,11 @@
+[2022-11-02  15:36:28] test_case.py -> test_case line:13 [INFO] : 用例初始信息{'path': '/get_waybill_no', 'method': 'get', 'remark': '获取运单号，提取运单号,这个方法提取出运单号', 'is_run': True, 'data': None, 'extract_key': {'waybill_no': '$.waybill_no'}, 'assert_expression': ['"lj520"=="$.waybill_no"'], 'case_name': '获取运单号'}
+[2022-11-02  15:36:28] requests_.py -> get line:16 [INFO] : /get_waybill_no最终的请求参数：url信息http://192.168.1.5:8001/get_waybill_no,headrs信息{'Accept-Encoding': 'gzip, deflate', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'token': 'em123dca666333'}
+[2022-11-02  15:36:28] case.py -> extract_ line:15 [INFO] : 参数提取表达式：{'waybill_no': '$.waybill_no'}
+[2022-11-02  15:36:28] assert_.py -> assert_response line:19 [INFO] : 初始的断言列表['"lj520"=="$.waybill_no"']
+[2022-11-02  15:36:28] assert_.py -> assert_response line:38 [INFO] : 替换完成后的断言列表['"lj520"=="lj520"']
+[2022-11-02  15:36:28] assert_.py -> assert_response line:46 [INFO] : 最终断言结果[True]
+[2022-11-02  15:36:28] test_case.py -> test_case line:13 [INFO] : 用例初始信息{'path': '/lu_dan', 'method': 'post', 'remark': '录单，使用运单号', 'is_run': True, 'data': {'waybill_no': '$.waybill_no', 'lu_dan_ren': '小江'}, 'extract_key': None, 'assert_expression': ['"运单创建成功"=="$.msg"'], 'case_name': '录单'}
+[2022-11-02  15:36:28] requests_.py -> post line:25 [INFO] : /lu_dan最终的请求参数：url信息http://192.168.1.5:8001/lu_dan,headrs信息{'Accept-Encoding': 'gzip, deflate', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'token': 'em123dca666333'},data信息{'waybill_no': 'lj520', 'lu_dan_ren': '小江'}
+[2022-11-02  15:36:28] assert_.py -> assert_response line:19 [INFO] : 初始的断言列表['"运单创建成功"=="$.msg"']
+[2022-11-02  15:36:28] assert_.py -> assert_response line:38 [INFO] : 替换完成后的断言列表['"运单创建成功"=="运单创建成功"']
+[2022-11-02  15:36:28] assert_.py -> assert_response line:46 [INFO] : 最终断言结果[True]

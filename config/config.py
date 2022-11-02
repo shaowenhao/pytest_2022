@@ -4,3 +4,4 @@
 # 文件名称: config.PY
 
 Environment = 'test_environment'
+log_path = r'D:\PycharmProjects\pytest_2022\log'

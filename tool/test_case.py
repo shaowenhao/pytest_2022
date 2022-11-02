@@ -6,10 +6,11 @@ import pytest
 
 from tool import  ReadFile
 from tool.case import case_assert_result
-
+from tool.log import logger
 
 @pytest.mark.parametrize('case_data',ReadFile.read_case('case/test.yaml'))
 def test_case(case_data):
+    logger.info(f'用例初始信息{case_data}')
     print(case_data)
     assert case_assert_result(case_data)
 '''
